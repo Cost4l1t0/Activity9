@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\LoginAlertMail;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -22,6 +25,10 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
+
+            $user = Auth::user();
+            Mail::to($user->email)->send(new LoginAlertMail($user));
+
             return redirect()->intended(route('dashboard'));
         }
 

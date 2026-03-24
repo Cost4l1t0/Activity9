@@ -2623,3 +2623,256 @@ Did you mean one of these?
 #3 D:/XAMP2/htdocs/activity-9/artisan(12): Illuminate/Foundation/Console/Kernel->handle()
 #4 {main}
 "} 
+[2026-03-24 03:09:20] local.ERROR: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: activity_9, SQL: select count(*) as aggregate from `users` where `email` = Leoromo2854@gmail.com) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: activity_9, SQL: select count(*) as aggregate from `users` where `email` = Leoromo2854@gmail.com) at D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php:838)
+[stacktrace]
+#0 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(794): Illuminate/Database/Connection->runQueryCallback()
+#1 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate/Database/Connection->run()
+#2 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3505): Illuminate/Database/Connection->select()
+#3 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3490): Illuminate/Database/Query/Builder->runSelect()
+#4 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(4080): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():3489}()
+#5 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3489): Illuminate/Database/Query/Builder->onceWithColumns()
+#6 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(4004): Illuminate/Database/Query/Builder->get()
+#7 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3932): Illuminate/Database/Query/Builder->aggregate()
+#8 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(53): Illuminate/Database/Query/Builder->count()
+#9 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1083): Illuminate/Validation/DatabasePresenceVerifier->getCount()
+#10 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(726): Illuminate/Validation/Validator->validateUnique()
+#11 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate/Validation/Validator->validateAttribute()
+#12 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate/Validation/Validator->passes()
+#13 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(598): Illuminate/Validation/Validator->fails()
+#14 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(156): Illuminate/Validation/Validator->validate()
+#15 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate/Http/Request->{closure:Illuminate/Foundation/Providers/FoundationServiceProvider::registerRequestValidation():148}()
+#16 D:/XAMP2/htdocs/activity-9/app/Http/Controllers/Auth/RegisterController.php(22): Illuminate/Http/Request->__call()
+#17 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App/Http/Controllers/Auth/RegisterController->register()
+#18 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Route.php(265): Illuminate/Routing/ControllerDispatcher->dispatch()
+#19 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Route.php(211): Illuminate/Routing/Route->runController()
+#20 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate/Routing/Route->run()
+#21 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():821}()
+#22 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():178}()
+#23 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Auth/Middleware/RedirectIfAuthenticated->handle()
+#24 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#25 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle()
+#26 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#27 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle()
+#28 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#29 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle()
+#30 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#31 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest()
+#32 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle()
+#33 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#34 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle()
+#35 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#36 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle()
+#37 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#38 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then()
+#39 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack()
+#40 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute()
+#41 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute()
+#42 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch()
+#43 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}()
+#44 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():178}()
+#45 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle()
+#46 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle()
+#47 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#48 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle()
+#49 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle()
+#50 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#51 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle()
+#52 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#53 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle()
+#54 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#55 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle()
+#56 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#57 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle()
+#58 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#59 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle()
+#60 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#61 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle()
+#62 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#63 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then()
+#64 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter()
+#65 D:/XAMP2/htdocs/activity-9/public/index.php(17): Illuminate/Foundation/Http/Kernel->handle()
+#66 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#67 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión at D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:67)
+[stacktrace]
+#0 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): PDO::connect()
+#1 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(44): Illuminate/Database/Connectors/Connector->createPdoConnection()
+#2 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate/Database/Connectors/Connector->createConnection()
+#3 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(186): Illuminate/Database/Connectors/MySqlConnector->connect()
+#4 [internal function]: Illuminate/Database/Connectors/ConnectionFactory->{closure:Illuminate/Database/Connectors/ConnectionFactory::createPdoResolverWithHosts():181}()
+#5 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1257): call_user_func()
+#6 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(525): Illuminate/Database/Connection->getPdo()
+#7 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(420): Illuminate/Database/Connection->getPdoForSelect()
+#8 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(827): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::select():411}()
+#9 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(794): Illuminate/Database/Connection->runQueryCallback()
+#10 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate/Database/Connection->run()
+#11 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3505): Illuminate/Database/Connection->select()
+#12 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3490): Illuminate/Database/Query/Builder->runSelect()
+#13 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(4080): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():3489}()
+#14 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3489): Illuminate/Database/Query/Builder->onceWithColumns()
+#15 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(4004): Illuminate/Database/Query/Builder->get()
+#16 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3932): Illuminate/Database/Query/Builder->aggregate()
+#17 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(53): Illuminate/Database/Query/Builder->count()
+#18 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1083): Illuminate/Validation/DatabasePresenceVerifier->getCount()
+#19 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(726): Illuminate/Validation/Validator->validateUnique()
+#20 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate/Validation/Validator->validateAttribute()
+#21 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate/Validation/Validator->passes()
+#22 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(598): Illuminate/Validation/Validator->fails()
+#23 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(156): Illuminate/Validation/Validator->validate()
+#24 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate/Http/Request->{closure:Illuminate/Foundation/Providers/FoundationServiceProvider::registerRequestValidation():148}()
+#25 D:/XAMP2/htdocs/activity-9/app/Http/Controllers/Auth/RegisterController.php(22): Illuminate/Http/Request->__call()
+#26 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App/Http/Controllers/Auth/RegisterController->register()
+#27 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Route.php(265): Illuminate/Routing/ControllerDispatcher->dispatch()
+#28 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Route.php(211): Illuminate/Routing/Route->runController()
+#29 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate/Routing/Route->run()
+#30 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():821}()
+#31 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(47): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():178}()
+#32 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Auth/Middleware/RedirectIfAuthenticated->handle()
+#33 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#34 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle()
+#35 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#36 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle()
+#37 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#38 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle()
+#39 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#40 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest()
+#41 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle()
+#42 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#43 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle()
+#44 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#45 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle()
+#46 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#47 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then()
+#48 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack()
+#49 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute()
+#50 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute()
+#51 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch()
+#52 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}()
+#53 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():178}()
+#54 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle()
+#55 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle()
+#56 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#57 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle()
+#58 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle()
+#59 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#60 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle()
+#61 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#62 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle()
+#63 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#64 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle()
+#65 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#66 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle()
+#67 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#68 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle()
+#69 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#70 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle()
+#71 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():194}:195}()
+#72 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then()
+#73 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter()
+#74 D:/XAMP2/htdocs/activity-9/public/index.php(17): Illuminate/Foundation/Http/Kernel->handle()
+#75 D:/XAMP2/htdocs/activity-9/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#76 {main}
+"} 
+[2026-03-24 03:11:03] local.DEBUG: From: Activity 9 <hello@activity9.com>
+To: Hello@domain.com
+Subject: Bienvenido a Activity 9
+MIME-Version: 1.0
+Date: Tue, 24 Mar 2026 03:11:03 -0600
+Message-ID: <51bd61ef6a9753731a55be2009d25169@activity9.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 6px; }
+        h2 { color: #1a1a2e; }
+        p { color: #555; line-height: 1.6; }
+        .badge { background-color: #3b5bdb; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.9rem; }
+        .footer { margin-top: 24px; font-size: 0.8rem; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>¡Bienvenido a Activity 9!</h2>
+        <p>Hola <strong>Leo</strong>,</p>
+        <p>Tu cuenta ha sido creada exitosamente. Ya puedes acceder al sistema con tu correo <strong>Hello@domain.com</strong>.</p>
+        <p><span class="badge">Cuenta activa</span></p>
+        <p>Si no fuiste tú quien creó esta cuenta, ignora este mensaje.</p>
+        <div class="footer">Activity 9 — Laravel 12</div>
+    </div>
+</body>
+</html>
+  
+[2026-03-24 03:15:11] local.DEBUG: From: Activity 9 <hello@activity9.com>
+To: feqwfeqf@lupamileni.com
+Subject: Bienvenido a Activity 9
+MIME-Version: 1.0
+Date: Tue, 24 Mar 2026 03:15:11 -0600
+Message-ID: <d6b1dcc2cb08b98064c76d3d401df346@activity9.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 6px; }
+        h2 { color: #1a1a2e; }
+        p { color: #555; line-height: 1.6; }
+        .badge { background-color: #3b5bdb; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.9rem; }
+        .footer { margin-top: 24px; font-size: 0.8rem; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>¡Bienvenido a Activity 9!</h2>
+        <p>Hola <strong>123</strong>,</p>
+        <p>Tu cuenta ha sido creada exitosamente. Ya puedes acceder al sistema con tu correo <strong>feqwfeqf@lupamileni.com</strong>.</p>
+        <p><span class="badge">Cuenta activa</span></p>
+        <p>Si no fuiste tú quien creó esta cuenta, ignora este mensaje.</p>
+        <div class="footer">Activity 9 — Laravel 12</div>
+    </div>
+</body>
+</html>
+  
+[2026-03-24 03:16:48] local.DEBUG: From: Activity 9 <hello@activity9.com>
+To: fgerwqgko@outlook.com
+Subject: Bienvenido a Activity 9
+MIME-Version: 1.0
+Date: Tue, 24 Mar 2026 03:16:48 -0600
+Message-ID: <3ca0600accb8937c8ce62cbe2f01e969@activity9.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 6px; }
+        h2 { color: #1a1a2e; }
+        p { color: #555; line-height: 1.6; }
+        .badge { background-color: #3b5bdb; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.9rem; }
+        .footer { margin-top: 24px; font-size: 0.8rem; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>¡Bienvenido a Activity 9!</h2>
+        <p>Hola <strong>1234565</strong>,</p>
+        <p>Tu cuenta ha sido creada exitosamente. Ya puedes acceder al sistema con tu correo <strong>fgerwqgko@outlook.com</strong>.</p>
+        <p><span class="badge">Cuenta activa</span></p>
+        <p>Si no fuiste tú quien creó esta cuenta, ignora este mensaje.</p>
+        <div class="footer">Activity 9 — Laravel 12</div>
+    </div>
+</body>
+</html>
+  
